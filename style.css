@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* beginning of header styling */
+header {
+  display: block;
+}
+body {
+  line-height: 1.4;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* beginning of banner style */
+.banner {
+  display: flex;
+  height: calc(100vh - 7vh);
+  background: url(./images/explore.jpg);
+  background-repeat: round;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+}
+.banner-1 {
+  padding: 0px 2rem;
+  text-align: center;
+}
+.banner h1 {
+  margin-bottom: 2rem;
+}
+.banner p {
+  font-size: 0.8rem;
+  margin: 0px 1rem 2rem 1rem;
+}
+.banner h3 {
+  border: 0.2rem solid white;
+  width: 12rem;
+  margin: auto;
+}
+/* end of banner style */
+
+/* beginning about style */
+.about {
+  padding: 4rem;
+  text-transform: uppercase;
+}
+.about-1 {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.about-1 span {
+  color: aqua;
+}
+.img {
+  float: left;
+  position: relative;
+  width: 50vw;
+  margin-top: 3rem;
+}
+.img img {
+  width: 100%;
+  display: block;
+}
+
+.img::before {
+  content: '';
+  border: 5px solid burlywood;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+.img::after {
+  content: '';
+  background-color: hsla(182, 25%, 50%, 0.5);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+.img:hover::after,
+.img:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.about-2,
+.about-3,
+.dummy {
+  padding: 1rem auto 1rem auto;
+  display: block;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.about-2 {
+  float: left;
+  padding-top: 2rem;
+  margin-top: 5rem;
+}
+.about-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  float: left;
+}
+
+.about-3 p {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.dummy {
+  float: left;
+  background-color: aqua;
+  color: white;
+  padding: 5px;
+}
+.dummy a {
+  text-decoration: none;
+}
+section {
+  margin-bottom: 30rem;
+}
+
+.env-1 {
+  margin-top: 2rem;
+}
+
+.env-1 img {
+  width: 100%;
+}
+.env {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25% 25% 25% 25%;
+  margin: 20px;
+  height: 70vh;
+  overflow: scroll;
+  clear: both;
+}
+.env div img {
+  padding: 3px 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    height: calc(100vh - 7vh);
+  }
+  .img {
+    width: 90vw;
+  }
+
+  .banner-1 h1,
+  h3,
+  p {
+    margin: 0.5rem auto;
+  }
+  .banner {
+    background: teal;
+  }
+  .env-1 {
+    grid-template-columns: auto;
+  }
+}
